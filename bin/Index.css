@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    margin-top:10px;
+    background-color:lightblue;
+    width: 40%;
+    min-height: 730px;
+    margin-left:30%;
+    position: relative;
+    
+}
+.jai{
+    margin-left: 20px;
+    color: gray;
+}
+.line{
+    margin-left: 20px;
+    border-top: 3px solid ;
+    color:black;
+    width:60%;
+}
+.linetwo{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-top: 3px solid ;
+    color:black;
+}
+.vl{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 3px solid black;
+    transform: translateX(-50%);
+    margin-top: 85px;
+    margin-bottom: 10px;
+}
