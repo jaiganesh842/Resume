@@ -22,7 +22,7 @@ then
     Logger log = LoggerFactory.getLogger("com.lombardrisk.colline.stp.Rule");
 
     List amountList = QueryUtil.select(
-        "SELECT ABS(ROUND((cw.agreementrequirement / " +
+        "ABS(ROUND((cw.agreementrequirement / " +
         "nci_eai$owner.f_get_fxrate(rd.refdatavalue, 'EUR', 1, SYSDATE)), 2)) " +
         "FROM colworkflow cw " +
         "INNER JOIN colagreementheader cah ON cah.id = cw.agreementid " +
@@ -41,8 +41,8 @@ then
         log.info("M_HUGE_AMOUNT: amountList null or empty");
     }
 
-    log.info("M_HUGE_AMOUNT: Agreement ID |" + 
-             $marginRuleData.agreement.agreementId + 
+    log.info("M_HUGE_AMOUNT: Agreement ID |" +
+             $marginRuleData.agreement.agreementId +
              "| AMOUNT_EUR |" + amountEur);
 
     if (amountEur != null && amountEur > 250000000) {
@@ -71,4 +71,3 @@ then
              " ->| Exit");
 
 end
-
